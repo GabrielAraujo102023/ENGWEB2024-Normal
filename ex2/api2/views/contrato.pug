@@ -1,0 +1,16 @@
+extends layout
+
+block content
+   h1= contrato.idcontrato
+   p= contrato.nAnuncio
+   p= contrato.tipoprocedimento
+   p= contrato.objectoContrato
+   p= contrato.dataPublicacao
+   p= contrato.dataCelebracaoContrato
+   p= contrato.precoContratual
+   p= contrato.prazoExecucao
+   p= contrato.NIPC_entidade_comunicante 
+   p= contrato.entidade_comunicante
+   p= contrato.fundamentacao
+   h3
+    a(href='/') Voltar

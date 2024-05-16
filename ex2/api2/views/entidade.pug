@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1= contratos[0].entidade_comunicante
+    h2= contratos[0].NIPC_entidade_comunicante
+    table
+     tr
+      th ID
+      th Objecto
+      th Data Celebração
+      th Preço
+     each contrato in contratos
+      tr
+        td 
+          a(href=contrato.idcontrato)= contrato.idcontrato
+        td= contrato.objectoContrato
+        td= contrato.dataCelebracaoContrato
+        td= contrato.precoContratual
+    h3= valor
+    a(href='/') Voltar

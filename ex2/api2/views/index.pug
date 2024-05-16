@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 metainf
+  table
+    tr
+      th ID
+      th Objecto
+      th Data Celebração
+      th Preço
+      th NIPC
+      th Entidade
+    each contrato in contratos
+      tr
+        td 
+          a(href=contrato.idcontrato)= contrato.idcontrato
+        td= contrato.objectoContrato
+        td= contrato.dataCelebracaoContrato
+        td= contrato.precoContratual
+        td 
+          a(href='/entidades/' + contrato.NIPC_entidade_comunicante)= contrato.NIPC_entidade_comunicante
+        td= contrato.entidade_comunicante
+
